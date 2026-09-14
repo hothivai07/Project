@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial,sans-serif;
+    background-color: whitesmoke;
+}
+
+.container{
+    width: 95%;
+    margin: 20px auto;
+    background-color: white;
+}
+
+.menu{
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid lightgrey;
+
+    gap: 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.logo img{
+    background-color: red;
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.menu a{
+    text-decoration: none;
+    color: dimgray;
+
+    font-size: 16px;
+
+    padding: 25px 0;
+    
+}
+
+.menu a:hover{
+    color: red;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+}
+
+.menu a.active{
+    color: red;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+}
+
+.more{
+    margin-left: auto;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.food-list{
+    display: flex;
+    gap: 12px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.card {
+    flex: 1;
+
+    min-width: 0;
+
+    background-color: white;
+
+    border: 1px solid lightgray;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Ảnh */
+.card img {
+    width: 100%;
+    height: 145px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* Nội dung card */
+.info {
+    padding: 12px;
+}
+
+/* Tên nhà hàng */
+.info h3 {
+    font-size: 17px;
+    color: black;
+
+    margin-bottom: 8px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Địa chỉ */
+.address {
+    font-size: 13px;
+    color: gray;
+
+    margin-bottom: 18px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Loại nhà hàng */
+.type {
+    font-size: 13px;
+    color: dimgray;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+
+    .menu {
+        overflow-x: auto;
+        gap: 15px;
+    }
+
+    .food-list {
+        overflow-x: auto;
+    }
+
+    .card {
+        min-width: 230px;
+    }
+}
